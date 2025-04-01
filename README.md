@@ -33,14 +33,28 @@ Clone o repositório para a sua máquina local utilizando o comando:
 git clone https://github.com/rafaelmunetiko/RestaurantesAPI
 ```
 
-### 2. **Instale as Dependências**
+### 2. **Crie o Ambiente Virtual (venv)**
+É recomendável criar um ambiente virtual para garantir que as dependências sejam isoladas e não afetem outros projetos:
+
+```bash
+python -m venv venv
+```
+
+### 3. **Ative o Ambiente Virtual**
+Ative o ambiente virtual.
+
+```bash
+.\venv\Scripts\activate
+```
+
+### 4. **Instale as Dependências**
 Entre no diretório do projeto e instale as dependências listadas no arquivo `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. **Rodando o Script app.py**
+### 5. **Rodando o Script app.py**
 
 Este script consome a API externa e gera os arquivos `.json` contendo os cardápios. Para rodá-lo, utilize:
 
@@ -48,7 +62,7 @@ Este script consome a API externa e gera os arquivos `.json` contendo os cardáp
 python app.py
 ```
 
-### 4. **Rodando a API com FastAPI**
+### 6. **Rodando a API com FastAPI**
 
 Para rodar a API localmente, use o Uvicorn:
 
@@ -58,7 +72,7 @@ uvicorn main:app --reload
 
 A aplicação estará disponível em [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-#### 📝 Exemplos de Endpoints da API
+#### Exemplos de Endpoints da API
 
 ## 1. **GET /api/hello**
 Retorna uma mensagem simples de boas-vindas.
@@ -167,13 +181,3 @@ Resposta:
 
 ## Link para o Repositório no GitHub
 ## [Clique aqui para acessar o repositório](https://github.com/rafaelmunetiko/RestaurantesAPI)
-
-## Como Usar Este Projeto
-
-Clone o repositório para a sua máquina.
-
-Instale as dependências com o `pip install -r requirements.txt`.
-
-Execute os scripts conforme necessário (python app.py para consumir a API e `uvicorn main:app --reload` para rodar a API).
-
-Teste os endpoints da API usando ferramentas como Postman ou diretamente no navegador (para GET).
