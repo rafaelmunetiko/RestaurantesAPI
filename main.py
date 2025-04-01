@@ -3,12 +3,12 @@ from fastapi import FastAPI, Query
 
 app = FastAPI()
 
-@app.get('/api/hello')
-def hello_world():
+@app.get("/")
+def read_root():
     '''
-    Endpoint que exibe uma mensagem incrível do mundo da programação!
+    Endpoint que exibe uma mensagem dando boas vindas à API!
     '''
-    return {'Hello':'World'}
+    return {"message": "Bem-vindo à API de Restaurantes!"}
 
 @app.get('/api/restaurantes/')
 def get_restaurantes(restaurante: str = Query(None)):

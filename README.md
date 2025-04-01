@@ -72,16 +72,24 @@ uvicorn main:app --reload
 
 A aplicação estará disponível em [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
+## Testando a API com Swagger UI
+
+O FastAPI gera automaticamente uma interface interativa para testar os endpoints da API. Para acessar a interface **Swagger UI**, basta abrir o seguinte link no seu navegador:
+
+http://127.0.0.1:8000/docs
+
+Na interface, você pode explorar todos os endpoints da API, enviar requisições e ver as respostas de forma visual e prática. Isso facilita a interação com a API durante o desenvolvimento e testes.
+
 #### Exemplos de Endpoints da API
 
-## 1. **GET /api/hello**
+## 1. **GET /**
 Retorna uma mensagem simples de boas-vindas.
 
 Resposta:
 
 ```json
 {
-  "Hello": "World"
+  "message": "Bem-vindo à API de Restaurantes!"
 }
 ```
 
